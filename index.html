@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#f6f7fb"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="轻课">
+ <meta name="referrer" content="no-referrer"><meta name="description" content="无广告的南邮研究生个人课表。支持本地导入、离线访问与 iPhone 主屏幕。">
+ <title>轻课 · 南邮课表</title><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./apple-touch-icon.png"><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="app-shell">
+ <header class="topbar"><a class="brand" href="./" aria-label="轻课首页"><img src="./icon.svg" alt="" width="38" height="38"><span>轻课<small>NJUPT · 研究生课表</small></span></a><div class="top-actions"><span class="local-badge"><i></i><span id="storage-status">保存在此设备</span></span><button class="icon-btn" data-action="install" aria-label="添加到手机主屏幕" title="添加到主屏幕" id="install-top"></button></div></header>
+ <main id="main" tabindex="-1"></main>
+ <nav class="bottom-nav" aria-label="主导航"><button data-view="timetable" aria-current="page"></button><button data-view="courses"></button><button data-view="import"></button><button data-view="settings"></button></nav>
+</div>
+<dialog id="modal"><div id="modal-content"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><p>请启用 JavaScript 以查看、编辑和导入课表。</p></noscript>
+<script defer src="./vendor/jszip.min.js"></script><script type="module" src="./app.mjs"></script>
+</body>
+</html>
